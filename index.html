@@ -2,39 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
+      /* Apply full height for the body */
       body {
         font-family: Arial, sans-serif;
         background-color: #f0f0f0;
         margin: 0;
-        padding: 20px;
+        padding: 0;
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
-        height: 100vh;
+        align-items: center;
+        height: 100vh; /* 100% of the viewport height */
         text-align: center;
+        box-sizing: border-box;
+      }
+
+      /* Content wrapper to ensure centering */
+      .content {
+        max-width: 600px;
+        padding: 20px;
+        box-sizing: border-box;
       }
 
       h1 {
         color: #2c3e50;
         font-size: 3em;
+        margin: 10px 0;
       }
 
       h2 {
         color: #3498db;
         border-bottom: 2px solid #3498db;
         padding-bottom: 5px;
-        margin-top: 30px;
+        margin-top: 20px;
         width: 100%;
-        max-width: 600px;
       }
 
       p {
         font-size: 1.2em;
         color: #555;
         line-height: 1.6;
-        max-width: 600px;
         margin: 10px 0;
       }
 
@@ -64,30 +72,53 @@
       a:hover {
         background-color: #c0392b;
       }
+
+      /* Responsive design for smaller screens */
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2.5em;
+        }
+
+        h2 {
+          font-size: 1.5em;
+        }
+
+        p, ul li {
+          font-size: 1em;
+        }
+
+        a {
+          padding: 8px 12px;
+          font-size: 0.9em;
+        }
+      }
+
     </style>
   </head>
   <body>
-    <h1>Igor Grygoriv</h1>
-    <h2>A little about me</h2>
-    <p>
-      My name is Igor, and I am a computer science student. I am originally from
-      Ukraine. My passion for computer science drives me to learn more and
-      develop skills that can help contribute to innovative projects.
-    </p>
-    <h2>Languages</h2>
-    <ul>
-      <li>Python</li>
-      <li>JavaScript</li>
-      <li>C++</li>
-      <li>SQL</li>
-    </ul>
-    <h2>Frameworks</h2>
-    <ul>
-      <li>React</li>
-      <li>Django</li>
-      <li>Flask</li>
-      <li>Express</li>
-    </ul>
-    <a href="/rickroll.html">Click here!</a>
+    <div class="content">
+      <h1>Igor Grygoriv</h1>
+      <h2>A little about me</h2>
+      <p>
+        My name is Igor, and I am a computer science student. I am originally
+        from Ukraine. My passion for computer science drives me to learn more
+        and develop skills that can help contribute to innovative projects.
+      </p>
+      <h2>Languages</h2>
+      <ul>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>C++</li>
+        <li>SQL</li>
+      </ul>
+      <h2>Frameworks</h2>
+      <ul>
+        <li>React</li>
+        <li>Django</li>
+        <li>Flask</li>
+        <li>Express</li>
+      </ul>
+      <a href="/rickroll.html">Click here!</a>
+    </div>
   </body>
 </html>
