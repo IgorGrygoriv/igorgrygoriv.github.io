@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script>
+      const time = new Date().getHours() + ":" + new Date().getMinutes();
+      const time2 = new Date().getHours();
+      const arrivalDate = new Date(); 
+      arrivalDate.setDate(arrivalDate.getDate() + 7);
+      function userprompt() {
+        const userName = prompt("Enter your name: ");
+        const userOrder = prompt("Enter your order: ");
+        let userOrderQuantity;
+
+        do {
+          userOrderQuantity = prompt(
+            "Enter the quantity (between 1 and 100): "
+          );
+          userOrderQuantity = parseInt(userOrderQuantity);
+        } while (
+          isNaN(userOrderQuantity) ||
+          userOrderQuantity < 1 ||
+          userOrderQuantity > 99
+        );
+        if (time2 < 12) {
+          document.writeln("<h1>Good Morning, " + userName + " the time now is " + time + " AM</h1>");
+        } else if (time2 < 18) {
+          document.writeln("<h1>Good Afternoon, " + userName + " the time now is " + time + " PM</h1>");
+        } else {
+          document.writeln("<h1>Good Evening, " + userName + " the time now is " + time + " PM</h1>");
+        }
+        
+        
+        document.writeln("<h3> You ordered " + userOrderQuantity + " " + userOrder + "</h3>");
+        document.writeln("<h3> Your order of " + userOrder + " will arrive on " + arrivalDate + "</h3>" );
+      };
+      window.alert("Welcome to the store where you buy stuff!!!!!");
+      userprompt();
+    </script>
+  </body>
+</html>
