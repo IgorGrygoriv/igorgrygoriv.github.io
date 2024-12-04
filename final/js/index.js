@@ -58,10 +58,14 @@ function filterByPriceDescending() {
   for (let i = 0; i < sortedData.length; i++) {
     const crypto = sortedData[i];
     const img = crypto.image;
+    let nameLowercase = crypto.name.toLowerCase();
+    if(crypto.id === "staked-ether"){
+      nameLowercase = "staked-ether";
+    }
     if(crypto.price_change_percentage_24h > 0){ 
     document.getElementById("buttons").innerHTML +=
       "<a href='./coinsHtml/" +
-      crypto.name +
+      nameLowercase +
       ".html' class='btn btn-sm btn-hover' style=' background-color: #4a5568; color: #cbd5e0; text-align: left;'><div class='row'><div class='col-md-4'><img src=" +
       img +
       " style='width: 25px; height: 25px' class='m-2'>" +
@@ -76,7 +80,7 @@ function filterByPriceDescending() {
       else {
         document.getElementById("buttons").innerHTML +=
       "<a href='./coinsHtml/" +
-      crypto.name +
+      nameLowercase +
       ".html' class='btn btn-sm btn-hover' style=' background-color: #4a5568; color: #cbd5e0; text-align: left;'><div class='row'><div class='col-md-4'><img src=" +
       img +
       " style='width: 25px; height: 25px' class='m-2'>" +
@@ -99,10 +103,14 @@ function filterByPriceAscending() {
   for (let i = 0; i < sortedData.length; i++) {
     const crypto = sortedData[i];
     const img = crypto.image;
+    let nameLowercase = crypto.name.toLowerCase();
+    if(crypto.id === "staked-ether"){
+      nameLowercase = "staked-ether";
+    }
     if(crypto.price_change_percentage_24h > 0){ 
     document.getElementById("buttons").innerHTML +=
       "<a href='./coinsHtml/" +
-      crypto.name +
+      nameLowercase +
       ".html' class='btn btn-sm btn-hover' style=' background-color: #4a5568; color: #cbd5e0; text-align: left;'><div class='row'><div class='col-md-4'><img src=" +
       img +
       " style='width: 25px; height: 25px' class='m-2'>" +
@@ -117,7 +125,7 @@ function filterByPriceAscending() {
       else {
         document.getElementById("buttons").innerHTML +=
       "<a href='./coinsHtml/" +
-      crypto.name +
+      nameLowercase +
       ".html' class='btn btn-sm btn-hover' style=' background-color: #4a5568; color: #cbd5e0; text-align: left;'><div class='row'><div class='col-md-4'><img src=" +
       img +
       " style='width: 25px; height: 25px' class='m-2'>" +
@@ -136,14 +144,17 @@ function filterByPriceAscending() {
 function filterByPercentAscending() {
   document.getElementById("buttons").innerHTML = "";
   const sortedData = dataObj.sort((a, b) => a.price_change_percentage_24h - b.price_change_percentage_24h);
-
   for (let i = 0; i < sortedData.length; i++) {
     const crypto = sortedData[i];
     const img = crypto.image;
+    let nameLowercase = crypto.name.toLowerCase();
+    if(crypto.id === "staked-ether"){
+      nameLowercase = "staked-ether";
+    }
     if(crypto.price_change_percentage_24h > 0){ 
     document.getElementById("buttons").innerHTML +=
       "<a href='./coinsHtml/" +
-      crypto.name +
+      nameLowercase +
       ".html' class='btn btn-sm btn-hover' style=' background-color: #4a5568; color: #cbd5e0; text-align: left;'><div class='row'><div class='col-md-4'><img src=" +
       img +
       " style='width: 25px; height: 25px' class='m-2'>" +
@@ -158,7 +169,7 @@ function filterByPercentAscending() {
       else {
         document.getElementById("buttons").innerHTML +=
       "<a href='./coinsHtml/" +
-      crypto.name +
+      nameLowercase +
       ".html' class='btn btn-sm btn-hover' style=' background-color: #4a5568; color: #cbd5e0; text-align: left;'><div class='row'><div class='col-md-4'><img src=" +
       img +
       " style='width: 25px; height: 25px' class='m-2'>" +
@@ -181,10 +192,14 @@ function filterByPercentDescending() {
   for (let i = 0; i < sortedData.length; i++) {
     const crypto = sortedData[i];
     const img = crypto.image;
+    let nameLowercase = crypto.name.toLowerCase();
+    if(crypto.id === "staked-ether"){
+      nameLowercase = "staked-ether";
+    }
     if(crypto.price_change_percentage_24h > 0){ 
     document.getElementById("buttons").innerHTML +=
       "<a href='./coinsHtml/" +
-      crypto.name +
+      nameLowercase +
       ".html' class='btn btn-sm btn-hover' style=' background-color: #4a5568; color: #cbd5e0; text-align: left;'><div class='row'><div class='col-md-4'><img src=" +
       img +
       " style='width: 25px; height: 25px' class='m-2'>" +
@@ -199,7 +214,7 @@ function filterByPercentDescending() {
       else {
         document.getElementById("buttons").innerHTML +=
       "<a href='./coinsHtml/" +
-      crypto.name +
+      nameLowercase +
       ".html' class='btn btn-sm btn-hover' style=' background-color: #4a5568; color: #cbd5e0; text-align: left;'><div class='row'><div class='col-md-4'><img src=" +
       img +
       " style='width: 25px; height: 25px' class='m-2'>" +
