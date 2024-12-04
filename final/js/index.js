@@ -1,9 +1,7 @@
 let dataObj = {};
 window.onload = async function handleApi() {
-  const apiKey = "CG-Eqd7N9RCLUV68tt4MtmHkjdh";
   const url =
-    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=10&page=1?x_cg_demo_api_key=" +
-    apiKey;
+    "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=10&page=1?x_cg_demo_api_key=" 
   const options = {
     method: "GET",
   };
